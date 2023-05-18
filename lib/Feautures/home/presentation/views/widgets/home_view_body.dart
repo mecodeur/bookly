@@ -11,18 +11,25 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24.0),
+      padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomAppBar(),
-            FeatureBooksListView(),
-            SizedBox(height: 40,),
-            Text('Best Seller', style: Styles.textStyle18,),
-            SizedBox(height: 20,),
-            BestSellerListViewItem(),
-          ],
-        ),
+        children: [
+          CustomAppBar(),
+          FeatureBooksListView(),
+          SizedBox(
+            height: 40,
+          ),
+          Text(
+            'Best Seller',
+            style: Styles.textStyle18,
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          BestSellerListViewItem(),
+        ],
+      ),
     );
   }
 }
@@ -41,18 +48,29 @@ class BestSellerListViewItem extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.zero,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: Colors.grey
-              ),
+                  borderRadius: BorderRadius.circular(8), color: Colors.grey),
               child: Image(
                 image: AssetImage(AssetsData.testImage),
                 fit: BoxFit.fill,
               ),
             ),
           ),
+          SizedBox(
+            width: 30,
+          ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('data'),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * .5,
+                child: Text(
+                  'harry Potter and the Goblet of Fire',
+                  style: Styles.textStyle18,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
               Text('data'),
               Text('data'),
             ],
@@ -62,6 +80,3 @@ class BestSellerListViewItem extends StatelessWidget {
     );
   }
 }
-
-
-
