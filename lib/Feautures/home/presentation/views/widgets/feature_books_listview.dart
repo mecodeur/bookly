@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'custom_list_view_item.dart';
+import 'feature_list_view_item.dart';
 
 class FeatureBooksListView extends StatelessWidget {
   const FeatureBooksListView({Key? key}) : super(key: key);
@@ -14,7 +14,7 @@ class FeatureBooksListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: CustomListViewItem(),
+              child: FeatureListViewItem(),
             );
           }),
     );
