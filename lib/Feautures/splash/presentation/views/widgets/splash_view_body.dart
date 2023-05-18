@@ -1,3 +1,4 @@
+import 'package:bookly/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class SplashViewBody extends StatelessWidget {
@@ -9,7 +10,9 @@ class SplashViewBody extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset('assets/images/Logo.png'),
+        Image.asset(AssetsData.logo),
+        SizedBox(height: 8,),
+        Text('Read free Books', textAlign: TextAlign.center,),
       ],
     );
   }
