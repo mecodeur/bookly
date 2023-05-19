@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/assets.dart';
 
-class FeatureListViewItem extends StatelessWidget {
-  const FeatureListViewItem({Key? key}) : super(key: key);
+class FeatureBooksListViewItem extends StatelessWidget {
+  const FeatureBooksListViewItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
