@@ -10,7 +10,6 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return CustomScrollView(
       physics: const BouncingScrollPhysics(),
       slivers: [
@@ -43,7 +42,7 @@ class HomeViewBody extends StatelessWidget {
             ],
           ),
         ),
-        SliverFillRemaining(
+        const SliverFillRemaining(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: BestSellerListView(),
@@ -51,7 +50,5 @@ class HomeViewBody extends StatelessWidget {
         ),
       ],
     );
-
-
   }
 }
