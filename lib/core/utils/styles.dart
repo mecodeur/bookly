@@ -2,7 +2,6 @@ import 'package:bookly/constants.dart';
 import 'package:flutter/cupertino.dart';
 
 abstract class Styles {
-
   static const textStyle14 = TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.normal,
@@ -28,7 +27,6 @@ abstract class Styles {
     fontFamily: kGtSectraFine,
     letterSpacing: 1.2,
   );
-
 }
 
 const TextStyle textStyle = TextStyle();
