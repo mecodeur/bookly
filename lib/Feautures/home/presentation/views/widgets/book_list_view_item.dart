@@ -20,14 +20,14 @@ class BookListViewItem extends StatelessWidget {
           children: [
             AspectRatio(
               aspectRatio: 2.5 / 4,
-              child: CustomBookImage(imageUrl: book.volumeInfo.imageLinks!.thumbnail,),
+              child: CustomBookImage(imageUrl: book.volumeInfo.imageLinks?.thumbnail ?? '',),
             ),
             SizedBox(
               width: 30,
             ),
             Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: Wrap(
+                //crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
                     width: MediaQuery.of(context).size.width * .5,

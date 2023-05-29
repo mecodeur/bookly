@@ -25,6 +25,7 @@ class BestSellerListView extends StatelessWidget {
                     onTap: () {
                       GoRouter.of(context).push(AppRouter.kBookDetailsView);
                     },
+
                     child: BookListViewItem(book: state.books[index],));
               });
         } else if (state is NewsetBooksFailure) {
