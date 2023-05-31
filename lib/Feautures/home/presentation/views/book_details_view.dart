@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BookDetailsView extends StatefulWidget {
-  const BookDetailsView({Key? key, required this.books}) : super(key: key);
+  const BookDetailsView({Key? key, required this.bookModel}) : super(key: key);
 
-  final BookModel books;
+  final BookModel bookModel;
   @override
   State<BookDetailsView> createState() => _BookDetailsViewState();
 }
@@ -17,7 +17,7 @@ class _BookDetailsViewState extends State<BookDetailsView> {
   @override
   void initState() {
     BlocProvider.of<SimilarBooksCubit>(context).feetchSimilarBooks(
-        category: widget.books.volumeInfo.categories![0],
+        category: widget.bookModel.volumeInfo.categories![0],
     );
     super.initState();
   }
@@ -25,7 +25,9 @@ class _BookDetailsViewState extends State<BookDetailsView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: BookDetailsViewBody(),
+        child: BookDetailsViewBody(
+          bookModel: widget.bookModel,
+        ),
       ),
     );
   }
